@@ -37,8 +37,9 @@ cell lines.
 \section{Installation}
 The package can be installed directly from Bioconductor with
 \begin{verbatim}
-source("https://bioconductor.org/biocLite.R")
-biocLite("garfield")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("garfield")
 \end{verbatim}
 and loaded as follows
 \begin{verbatim}
